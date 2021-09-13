@@ -22,6 +22,7 @@ services:
             - WORDPRESS_DEBUG=${WORDPRESS_DEBUG-false}
         volumes:
             - ./wordpress:/var/www/html
+            - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
         links:
             - "mysql:mysql"
 
